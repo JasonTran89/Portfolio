@@ -39,7 +39,8 @@
     justify-content: space-around;
 
 }
-.n{
+
+.n {
     margin: 0;
     padding: 20px;
 
@@ -68,7 +69,7 @@
 
 .personalinfor {
     display: flex;
-   
+
     margin: 70px;
     padding: 20px 0px;
     box-shadow: 0 0 10px 2px #ccc;
@@ -80,9 +81,9 @@
 
 .infor {
     width: 50%;
-  
+
     display: inline-block;
-  
+
 }
 
 .listofinfor {
@@ -95,45 +96,51 @@
     padding: 5px;
 }
 
-.detail{
+.detail {
     display: inline-block;
     width: 50%;
     padding-top: 20px;
     color: #06283D;
     margin: 0px 50px;
-    
+
 }
-.chart{
+
+.chart {
     display: inline-block;
     width: 100%;
     padding: 20px 20px 20px;
 
-    
+
 }
-.c{
-   height: 15px;
-   background-color:#468faf;
-   border-radius: 10px;
+
+.c {
+    height: 15px;
+    background-color: #468faf;
+    border-radius: 10px;
 }
-.titlec{
+
+.titlec {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.ability{
-   padding-top: 80px;
-   text-align: center;
-  
+
+.ability {
+    padding-top: 80px;
+    text-align: center;
+
 
 
 }
-.abilities{
-  display: flex;
-  justify-content: space-around;
+
+.abilities {
+    display: flex;
+    justify-content: space-around;
 }
-.card{
+
+.card {
     width: 28%;
-    display:inline-block;
+    display: inline-block;
     padding: 50px 0px 50px 0px;
     margin: 50px 0px 50px 0px;
     height: 342px;
@@ -146,11 +153,13 @@
 
 
 }
-.card:hover{
+
+.card:hover {
     box-shadow: 0 0 10px 2px #ccc;
 }
-.icon{
-    
+
+.icon {
+
     border-radius: 100px;
     border: 10px solid #468faf;
     border-radius: 50%;
@@ -165,23 +174,27 @@
     transition: all 0.5s ease-in-out;
 
 }
-.icon:hover{
-    background-color:#06283D;
+
+.icon:hover {
+    background-color: #06283D;
     color: white;
-    
+
 }
-.favour{
+
+.favour {
     padding-top: 80px;
-   text-align: center;  
-     margin: 50px;
+    text-align: center;
+    margin: 50px;
 }
-.title{
-    padding : 20px 0px; 
+
+.title {
+    padding: 20px 0px;
     width: 100%;
     background-color: #06283D;
     color: white;
 }
-.in{
+
+.in {
     width: 28%;
     background-color: #a9d6e5;
     display: flex;
@@ -191,43 +204,50 @@
     border-radius: 7px;
 
 }
-.ani{
+
+.ani {
     width: 100%;
     height: 300px;
     border-radius: 7px;
 
 
 }
-.hobbies{
+
+.hobbies {
     padding-top: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
 }
-.podcasts{
+
+.podcasts {
     padding: 80px 0px;
     margin: 30px 0px;
 }
-.prg{
+
+.prg {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 70px 0px;
 }
-.pic2{
+
+.pic2 {
     width: 399px;
     height: 300px;
-    
+
 }
-.ep{
+
+.ep {
     width: 400px;
-    border-style: solid; 
-    border-width: 1px; 
+    border-style: solid;
+    border-width: 1px;
     border-color: #ccc;
 
 }
-.time{
+
+.time {
     width: 400px;
     height: 40px;
     text-align: left;
@@ -239,38 +259,45 @@
     align-items: center;
 
 }
-.title2{
+
+.title2 {
     background-color: #0F4C75;
     color: #BBE1FA;
 }
-.contact{
- margin: 0px 40px;
- display: flex;
- justify-content: space-around;
+
+.contact {
+    margin: 0px 40px;
+    display: flex;
+    justify-content: space-around;
 }
-.input{
+
+.input {
     display: flex;
     flex-direction: column;
-   
+
 }
-.left{
+
+.left {
     display: inline-block;
     width: 50%;
 }
-.input1{
+
+.input1 {
     padding: 9px;
     margin: 17px 0px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-.input2{
+
+.input2 {
     padding: 10px;
     margin-top: 10px;
     height: 100px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-.bt{
+
+.bt {
     padding: 15px 20px;
     margin-top: 40px;
     background-color: #468faf;
@@ -281,62 +308,76 @@
     height: 50px;
     font-size: 16px;
 }
-.bt:hover{
+
+.bt:hover {
     cursor: pointer;
     background-color: #4f72e5;
     box-shadow: 0 0 5px 1px var(--light-main-color);
 }
-.contact{
+
+.contact {
     background-color: #EEEEEE;
 }
-.right{
+
+.right {
     width: 50%;
     margin-left: 30px;
 }
-.in4{
-    margin-top: 20px;
-   
-    
-}
-.location{
-    display: flex;
-    margin: 15px 0px;
- 
-}
-.phone-num{
-    display: flex;
-    margin: 15px 0px;
-   
-}
-.email{
-    display: flex;
-    margin: 15px 0px;
-}
-.media{
-  text-align: center;
-  display: flex;
-  justify-content: center;
 
-  
+.in4 {
+    margin-top: 20px;
+
+
 }
-.fb{
+
+.location {
+    display: flex;
+    margin: 15px 0px;
+
+}
+
+.phone-num {
+    display: flex;
+    margin: 15px 0px;
+
+}
+
+.email {
+    display: flex;
+    margin: 15px 0px;
+}
+
+.media {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.fb {
     display: inline-block;
     margin-top: 10px;
     margin-right: 20px;
 }
-.ig{
+
+.ig {
     margin-top: 10px;
     margin-left: 20px
 }
-.eloffb{
+
+.eloffb {
     color: #4f72e5;
 }
-.eloffb:hover{
+
+.eloffb:hover {
     color: #06283D;
 }
-.elofig{
-    color : #E4405F;
+
+.elofig {
+    color: #E4405F;
 }
-.elofig:hover{
+
+.elofig:hover {
     color: #06283D;
 }
