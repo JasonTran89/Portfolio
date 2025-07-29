@@ -9,158 +9,128 @@
     <script src="https://kit.fontawesome.com/242802cdc7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="gallery.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Theme Switcher JS -->
+<script src="themeSwitcher.js" defer></script>
 </head>
+<!-- Thêm các thẻ script trước </body> -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/contactForm.js"></script>
+
+<script src="js/themeSwitcher.js"></script>
+
 
 <body>
 
-    <div class="header">
-    <h1 class="h1ofnavi">JsFolio</h1>
-    <div class="element">
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#about"> ABOUT </a>
-        </p>
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#skill"> ABILITIES </a>
-        </p>
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#favourites"> FAVOURITES </a>
-        </p>
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#podcast"> PODCAST </a>
-        </p>
-        <!-- Thêm mục ART mới -->
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#gallery"> ART </a>
-        </p>
-        <p class="n">
-            <a style="color: #a9d6e5;" href="#contact"> CONTACT </a>
-        </p>
-    </div>
+  <!-- Thay thế header cũ bằng -->
+<header class="sticky-header">
+    <nav class="navbar">
+      <div class="logo">JS</div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skill" class="nav-link">Skills</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  
+ 
 </div>
 
     <div class="content">
 
 
-        <div class="picintro">
-            <div class="titleofpic">
-                <h1>I am Jason Tran</h1>
-                <p>From Coder To Digital Developer</p>
+    
+<section class="hero">
+            <div class="hero-content">
+              <div class="animated-title">
+                <h1 class="text-stroke">JASON TRAN</h1>
+                <h2 class="typewriter">Full-Stack Developer</h2>
+              </div>
             </div>
+          </section>
+         
+     <section id="about" class="about-glass">
+  <div class="container">
+    <div class="glass-card">
+      <div class="about-header">
+        <h2><span>//</span> About Me</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="about-grid">
+        <div class="profile-card">
+          <div class="photo-frame">
+            <img src="me2.jpg" alt="Jason Tran">
+            <div class="tech-tags">
+              <span>C++</span>
+              <span>HTML/CSS</span>
+              <span>Python</span>
+            </div>
+          </div>
         </div>
+        
+        <div class="bio-content">
+  <div class="bio-header">
+    <h3>Full-Stack Developer <span class="highlight">from Vietnam</span></h3>
+    <div class="title-divider"></div>
+  </div>
+  
+  <div class="bio-body">
+    <p class="intro-text">
+      <span class="quote-mark">“</span>
+      I'm Trần Trí Dũng (Jason Tran), a dedicated Computer Science student at VNU-HCM High School for the Gifted 
+      with 2+ years of hands-on development experience across multiple domains.
+      <span class="quote-mark">”</span>
+    </p>
+    
+    <div class="expertise-section">
+      <h4 class="expertise-title">Core Expertise:</h4>
+      <div class="expertise-grid">
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div>
+            <h5>Frontend Development</h5>
+            <p>Building responsive, user-friendly interfaces with modern frameworks</p>
+          </div>
+        </div>
+        
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div>
+            <h5>Algorithm Design</h5>
+            <p>Creating efficient solutions to complex computational problems</p>
+          </div>
+        </div>
+        
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div>
+            <h5>Problem Solving</h5>
+            <p>Innovative approaches to technical challenges</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="personalinfor" id="about">
-            <div class="infor">
-                <div style="display:inline-block; display: flex; padding: 20px 50px 50px 20px; ">
-                    <img class="ava" src="https://i.pinimg.com/564x/3b/94/6e/3b946eb954f03a7eb2bbe6bfa02a22be.jpg"
-                        alt="">
-                    <div class="listofinfor">
-                        <p class="element1"><b>NAME:</b>
-                            <br>
-                            Vietnamese name: Trần Trí Dũng
-                            <br>
-                            English name: Jason Tran.
-                        </p>
-                        <p class="element1">
-                            <b>PROFILE:</b>
-                            Student, Frontend, and Backend.
-                        </p>
-                        <p class="element1">
-                            <b>EMAIl:</b> tridungtran1234@gmail.com.
-                        </p>
-                        <p class="element1">
-                            <b>PHONE NUMBER:</b> 0978198935.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="chart">
-                    <h3>SKILL</h3>
-                    <br>
-                    <!--C++ -->
-                    <div class="titlec">
-                        <p style=" display:inline-block">C++</p>
-                        <p style="text-align: right; display:inline-block">75%</p>
-                    </div>
-
-                    <div class="c">
-                        <div
-                            style="height: 15px; width: 75%; background-color: #013a63; border-radius: 10px; margin: 3px 0px 10px;">
-
-                        </div>
-                    </div>
-                    <br>
-                    <!--html -->
-                    <div class="titlec">
-                        <p style=" display:inline-block">HTML</p>
-                        <p style="text-align: right; display:inline-block">70%</p>
-                    </div>
-                    <div class="c">
-                        <div
-                            style="height: 15px; width: 70%; background-color: #013a63; border-radius: 10px; margin: 3px 0px 10px;">
-
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <!--css -->
-                    <div class="titlec">
-                        <p style=" display:inline-block">CSS</p>
-                        <p style="text-align: right; display:inline-block">70%</p>
-                    </div>
-                    <div class="c">
-                        <div
-                            style="height: 15px; width: 70%; background-color: #013a63; border-radius: 10px; margin: 3px 0px 10px;">
-
-                        </div>
-                    </div>
-                    <br>
-                    <!--python -->
-                    <div class="titlec">
-                        <p style=" display:inline-block">PYTHON</p>
-                        <p style="text-align: right; display:inline-block">15%</p>
-                    </div>
-                    <div class="c">
-                        <div
-                            style="height: 15px; width: 15%; background-color: #013a63; border-radius: 10px; margin: 3px 0px 10px;">
-
-                        </div>
-                    </div>
-                    <br>
-                    <!--java  -->
-                    <div class="titlec">
-                        <p style=" display:inline-block">JAVA</p>
-                        <p style="text-align: right; display:inline-block">0%</p>
-                    </div>
-                    <div class="c">
-
-                        <div
-                            style="height: 15px; width: 0%; background-color: #013a63; border-radius: 10px; margin: 3px 0px 10px;">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="detail">
-                <h1 style="display:inline-block;">ABOUT ME</h1>
-
-                <p style="display: inline-block; margin : 30px 0px 30px 0px">My name is Trần Trí Dũng. As student of
-                    VNU-HCM high school for gifted. I've embarked on a journey of selft-discovery and growth after
-                    graduating from secondary school. My passion for CS began when my parents guided me into this field.
-                    Since then, I've been actively participating in CS classes, learning both Frontend and Backend
-                    development. </p>
-                <br>
-                <p style="display: inline-block; margin : 30px 0px 30px 0px">Regarding my abilities, let's start with
-                    Frontend. Although I've recently begun learning it, my experience is somewhat limited. Nevertheless,
-                    I am fully committed to mastering it and am making significant strides in that direction.</p>
-                <br>
-                <p style="display: inline-block; margin : 30px 0px 30px 0px">Regarding Backend and my experience with
-                    C++, I've learned quite a bit about useful algorithms and how to apply them effectively. Right now,
-                    I'm in the process of learning Python to broaden my skills even further.</p>
-            </div>
+    
 
         </div>
         <div class="ability" id="skill">
@@ -295,7 +265,7 @@
                     </div>
                     <div class="ep">
                         <div style="height: 298px">
-                            <img src="https://storage.buzzsprout.com/variants/67saasw880axdnxi4394uqvxunky/5cfec01b44f3e29fae1fb88ade93fc4aecd05b192fbfbc2c2f1daa412b7c1921.jpg"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV2q8IR5-nhspMdTeGbfZ6mGavmi1xmuQvjg&s"
                                 class="pic2" alt="">
                         </div>
                         <div class="title2">
@@ -646,61 +616,45 @@
     <span class="close-btn">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
 </div>
-    <footer id="contact">
-        <div class="contact">
-            <div class="contact">
-                <div class="left">
-                    <h2 style="margin: 30px 0px; font-size: 40px;">Send message to me</h2>
-                    <div class="input">
-                        <input type="text" placeholder="Your name" class="input1">
-                        <input type="email" placeholder="Your email" class="input1">
-                        <input type="text" placeholder="Subject" class="input1">
-                        <input type="text" placeholder="Message" class="input2">
-                    </div>
-                    <button class="bt">Send message</button>
-                </div>
-                <div class="right">
-                    <h2 style="margin: 30px 0px; font-size: 40px;">Contact</h2>
-                    <p style="font-size: 22px;">Thanks for checking out my portfolio! Let's connect and chat about it
-                        sometime. I'm eager to hear your thoughts!</p>
-                    <div class="in4">
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                            <p style="margin-left: 10px; ">7 Street 3 ,Thu Đuc City, Ho Chi Minh City.
-                            </p>
-                        </div>
-                        <div class="phone-num">
-                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                            <p style="margin-left: 10px; "> 0978198935
-                            </p>
-                        </div>
-                        <div class="email">
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                            <p style="margin-left: 10px; "> tridungtran1234@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                    <div class="footerin4">
-                        <p style="font-size: 25px; text-align: center;">Or you can also reach us on other platforms.</p>
-                        <div class="media">
-                            <div class="fb">
-                                <a href="https://www.facebook.com/profile.php?id=100062380661758" class="eloffb">
-                                    <i class="fa-brands fa-facebook" aria-hidden="true" style="font-size: 50px;"></i>
-                                </a>
-                            </div>
-                            <div class="ig">
-                                <a href="https://www.instagram.com/js_tran89/" class="elofig">
-                                    <i class="fa-brands fa-instagram" aria-hidden="true" style="font-size: 50px;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <footer id="contact" class="contact-section">
+  <div class="container">
+    <!-- Contact Info -->
+    <div class="contact-card info-card">
+      <h2>Get in Touch</h2>
+      <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+      <ul class="contact-list">
+        <li><i class="fas fa-map-marker-alt"></i> 7 Street 3, Thủ Đức, HCM</li>
+        <li><i class="fas fa-phone"></i> 0978 198 935</li>
+        <li><i class="fas fa-envelope"></i> tridungtran1234@gmail.com</li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100062380661758"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/js_tran89/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
 
-                </div>
-            </div>
+    <!-- Contact Form -->
+    <div class="contact-card form-card">
+      <h2>Send Me a Message</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
         </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</footer>
 
-    </footer>
  
     <script src="gallery.js"></script>
 </body>

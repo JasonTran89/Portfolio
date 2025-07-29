@@ -1,44 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Khởi tạo Lightbox
+    // Lightbox elements
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.close-btn');
-
-    // Xử lý Lightbox
-    const handleImageClick = (e) => {
-        const targetImg = e.target.closest('.gallery-img');
-        if (!targetImg) return;
+    
+    // Xử lý click ảnh
+    const showLightbox = (targetImg) => {
+        // Lấy URL ảnh chất lượng cao từ data-src
+        const fullSizeSrc = targetImg.dataset.src || targetImg.currentSrc;
+        lightboxImg.src = fullSizeSrc;
         
-        // Kiểm tra ảnh đã load chưa
-        if (!targetImg.complete || targetImg.naturalWidth === 0) {
-            targetImg.addEventListener('load', () => {
-                lightbox.style.display = 'block';
-                lightboxImg.src = targetImg.src;
-            });
-        } else {
-            lightbox.style.display = 'block';
-            lightboxImg.src = targetImg.src;
-        }
+        // Hiển thị lightbox với animation
+        lightbox.style.display = 'flex';
+        setTimeout(() => lightbox.classList.add('active'), 10);
+        document.body.style.overflow = 'hidden';
     };
 
-    // Lazy Load với xử lý lỗi
+    // Lấy tất cả gallery items trong cả 2 sections
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    // Thêm sự kiện click cho từng item
+    galleryItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const img = item.querySelector('.gallery-img');
+            if (img) showLightbox(img);
+        });
+    });
+
+    // Đóng lightbox
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+        }, 300);
+        document.body.style.overflow = 'auto';
+    };
+
+    // Sự kiện đóng
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => e.target === lightbox && closeLightbox());
+    document.addEventListener('keydown', (e) => e.key === 'Escape' && closeLightbox());
+
+    // Lazy Load
     const lazyLoad = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const img = entry.target.querySelector('img');
-                if (!img) return;
-
-                // Load ảnh và xử lý lỗi
-                img.src = img.dataset.src;
-                img.onload = () => {
-                    img.style.opacity = 1;
-                    observer.unobserve(entry.target);
-                };
-                img.onerror = () => {
-                    console.error('Lỗi tải ảnh:', img.dataset.src);
-                    img.src = 'placeholder.jpg';
-                    observer.unobserve(entry.target);
-                };
+                const img = entry.target.querySelector('.gallery-img');
+                if (img?.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    img.onload = () => img.style.opacity = 1;
+                }
+                observer.unobserve(entry.target);
             }
         });
     };
@@ -49,85 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.01
     });
 
-    // Khởi tạo sự kiện
-    const initGallery = () => {
-        // Thêm sự kiện click cho toàn bộ gallery
-        document.querySelector('.gallery-grid')?.addEventListener('click', handleImageClick);
-
-        // Quan sát tất cả gallery item
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            // Thêm loading state
-            const img = item.querySelector('img');
-            if (img) {
-                img.style.transition = 'opacity 0.5s ease';
-                img.style.opacity = 0;
-            }
-            observer.observe(item);
-        });
-    };
-
-    // Xử lý đóng Lightbox
-    const closeLightbox = () => {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-    };
-
-    // Gán sự kiện đóng
-    closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-
-    // Khởi động gallery
-    initGallery();
-
-    // Fallback cho trình duyệt cũ
-    if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('[data-src]').forEach(img => {
-            img.src = img.dataset.src;
-        });
-    }
-});
-// Thêm vào gallery.js
-document.addEventListener('DOMContentLoaded', () => {
-    // ... các code hiện có
-
-    // Xử lý active navigation
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.n a');
-
-    function updateActiveNav() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    // Thêm smooth scroll
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop - 100,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    window.addEventListener('scroll', updateActiveNav);
+    // Quan sát tất cả items
+    galleryItems.forEach(item => observer.observe(item));
 });
