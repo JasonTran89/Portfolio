@@ -8,3 +8,8 @@ document.querySelectorAll('[data-animate]').forEach(el => {
     el.classList.add('hidden-element');
     scrollObserver.observe(el);
 });
+// Title scroll animation
+document.querySelectorAll('[data-animate-title]').forEach(el => {
+    el.classList.add('hidden-element');
+    scrollObserver.observe(el);
+});
